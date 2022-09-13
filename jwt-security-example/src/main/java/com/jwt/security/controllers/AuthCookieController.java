@@ -64,7 +64,8 @@ public class AuthCookieController {
 	
 	@PostMapping("/login")
 	public ResponseEntity<?> authenticateUser(
-			@Valid @RequestBody LoginRequest loginRequest, HttpServletResponse response) {
+			@Valid @RequestBody LoginRequest loginRequest,
+			HttpServletResponse response) {
 
 		Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(

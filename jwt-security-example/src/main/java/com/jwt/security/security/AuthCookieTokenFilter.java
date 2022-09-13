@@ -32,6 +32,7 @@ public class AuthCookieTokenFilter extends OncePerRequestFilter {
 	protected void doFilterInternal(
 			HttpServletRequest request, HttpServletResponse response,
 			FilterChain filterChain) throws ServletException, IOException {
+		
 		try {
 			Cookie[] cookies = request.getCookies();
 			if(cookies == null || cookies.length == 0) {
